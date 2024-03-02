@@ -5,14 +5,16 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Root from "./components/Root";
+import ErrorPage from "./pages/ErrorPage";
 
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h2>Hello World</h2>,
-    errorElement: <h2>Page Not Found!!!</h2>,
+    element: <Root/>,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: '/',
