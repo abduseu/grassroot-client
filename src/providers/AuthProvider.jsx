@@ -1,12 +1,13 @@
-import { createContext, useEffect, useState } from "react";
-import auth from '../firebase/firebase.config';
+import { createContext } from 'react';
 import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { useState, useEffect } from 'react';
+import auth from '../firebase/firebase.config';
 
 export const AuthContext = createContext(null)
 const googleProvider = new GoogleAuthProvider()
 
-const AuthProvider = ({children}) => {
-    const [user, setUser] = useState([])
+const AuthProvider = ({ children }) => {
+    const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
 
     //Manage User
@@ -22,29 +23,34 @@ const AuthProvider = ({children}) => {
 
     }, [])
 
-    //Google Authentication
+    //Google -> Sign in
     const signinGoogle=()=>{
         setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
 
-    //Email & password
-    const createUser = (email, password)=>{
+    //Email Password -> sign up
+    const createEmail =(email, password)=>{
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
-    const signInUser = (email, password)=>{
+    //Email Password -> Sign in
+    const signinEmail =(email, password)=>{
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
-
-    const logOut = ()=> {
-       return signOut(auth)
+    //Any method -> Logout
+    const logOut =()=>{
+        setLoading(true)
+        return signOut(auth)
     }
+        
 
-    const authInfo = { user, loading, signinGoogle, createUser, signInUser, logOut}
+    const AuthInfo = { user, loading, signinGoogle, createEmail, signinEmail, logOut }
 
     return (
         <div>
-            <AuthContext.Provider value={authInfo}>
+            <AuthContext.Provider value={AuthInfo}>
                 {children}
             </AuthContext.Provider>
         </div>
