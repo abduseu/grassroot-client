@@ -1,11 +1,13 @@
 import { Outlet } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Root = () => {
     return (
         <div>
             <header className="xl:container mx-auto">
                 <div className="mx-5 my-6">
-                    This is header component
+                    <Header></Header>
                 </div>
             </header>
             <main className="xl:container mx-auto">
@@ -16,7 +18,7 @@ const Root = () => {
             <footer className="bg-black text-white">
                 <div className="xl:container mx-auto">
                     <div className="mx-5 mt-6">
-                        This is footer component
+                        <Footer></Footer>
                     </div>
                 </div>
             </footer>
