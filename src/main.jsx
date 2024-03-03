@@ -8,7 +8,7 @@ import {
 import Root from "./components/Root";
 import ErrorPage from "./pages/ErrorPage";
 import AuthProvider from "./providers/AuthProvider";
-
+import HomePage from "./pages/HomePage"
 
 
 const router = createBrowserRouter([
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <h1>Home Page</h1>,
+        element: <HomePage />,
       },
     ]
   }
