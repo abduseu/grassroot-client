@@ -34,7 +34,7 @@ const Header = () => {
                 </div>
                 <div className="mt-6 md:mt-0">
                     <div>
-                        <ul className={`flex items-center gap-4 text-lg font-semibold list-none uppercase`}>
+                        <ul className={`flex items-center gap-4 md:gap-8 text-lg font-semibold list-none uppercase`}>
                             {user ?
                                 <>
                                     {linksPrivate}

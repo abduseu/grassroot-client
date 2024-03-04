@@ -33,3 +33,12 @@ span{
 .green{
     color: #16A34A;
 }
+
+.banner_img{
+    animation: plate 30s linear infinite;
+}
+
+@keyframes plate{
+    form{transform: rotate(0deg)}
+    to{transform: rotate(360deg)}
+}
