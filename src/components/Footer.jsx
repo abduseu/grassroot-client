@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="footer justify-between py-10">
             <aside className="flex flex-col justify-center h-full">
-                <h2 className="text-3xl font-bold flex items-center uppercase">Grass<span>root</span></h2>
+                <h2 className="text-3xl font-black flex items-center uppercase">Grass<span>root</span></h2>
                 <p>Quality Food since 2000</p>
             </aside>
             <nav>

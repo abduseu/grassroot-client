@@ -30,7 +30,7 @@ const Header = () => {
             {/* Logo & Button */}
             <div className="flex flex-col md:flex-row md:gap-10 items-center justify-between mb-2">
                 <div>
-                    <Link to="/" className="text-3xl font-bold flex items-center uppercase">Grass<span>root</span></Link>
+                    <Link to="/" className="text-3xl font-black flex items-center uppercase">Grass<span>root</span></Link>
                 </div>
                 <div className="mt-6 md:mt-0">
                     <div>

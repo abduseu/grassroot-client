@@ -60,7 +60,7 @@ const RegistrationPage = () => {
         <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:w-1/2">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold pb-8">
+                    <h1 className="text-5xl font-black pb-8">
                         Signup <ReactTyped strings={["Please...!"]} typeSpeed={100} backSpeed={50} loop />
                     </h1>
                 </div>
