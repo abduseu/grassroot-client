@@ -1,0 +1,143 @@
+[
+    {
+      "food_name": "Mozzarella Sticks",
+      "ingredients": "Mozzarella cheese, Breadcrumbs, Marinara sauce",
+      "food_image": "https://i.ibb.co/0cqfCt6/plate-02.png",
+      "food_category": "Appetizer",
+      "price": 8.99
+    },
+    {
+      "food_name": "Chicken Wings",
+      "ingredients": "Chicken wings, Hot sauce, Blue cheese dressing",
+      "food_image": "https://i.ibb.co/SVLQTMc/plate-04.png",
+      "food_category": "Appetizer",
+      "price": 10.99
+    },
+    {
+      "food_name": "Steak",
+      "ingredients": "Beef steak, Salt, Black pepper",
+      "food_image": "https://i.ibb.co/R7mjqrs/plate-03.png",
+      "food_category": "Entrees",
+      "price": 19.99
+    },
+    {
+      "food_name": "Salmon Fillet",
+      "ingredients": "Salmon fillet, Lemon, Garlic",
+      "food_image": "https://i.ibb.co/0cqfCt6/plate-02.png",
+      "food_category": "Entrees",
+      "price": 16.99
+    },
+    {
+      "food_name": "Signature Burger",
+      "ingredients": "Beef patty, Lettuce, Tomato",
+      "food_image": "https://i.ibb.co/SVLQTMc/plate-04.png",
+      "food_category": "Signature",
+      "price": 14.99
+    },
+    {
+      "food_name": "Pasta Alfredo",
+      "ingredients": "Pasta, Cream sauce, Parmesan cheese",
+      "food_image": "https://i.ibb.co/tz94hbD/plate-01.png",
+      "food_category": "Signature",
+      "price": 12.99
+    },
+    {
+      "food_name": "Cheesecake",
+      "ingredients": "Cream cheese, Graham cracker crumbs, Sugar",
+      "food_image": "https://i.ibb.co/0cqfCt6/plate-02.png",
+      "food_category": "Dessert",
+      "price": 7.99
+    },
+    {
+      "food_name": "Chocolate Lava Cake",
+      "ingredients": "Chocolate, Butter, Eggs",
+      "food_image": "https://i.ibb.co/R7mjqrs/plate-03.png",
+      "food_category": "Dessert",
+      "price": 8.99
+    },
+    {
+      "food_name": "Nachos",
+      "ingredients": "Tortilla chips, Cheese, Salsa",
+      "food_image": "https://i.ibb.co/SVLQTMc/plate-04.png",
+      "food_category": "Appetizer",
+      "price": 9.99
+    },
+    {
+      "food_name": "Garlic Bread",
+      "ingredients": "Baguette, Garlic, Butter",
+      "food_image": "https://i.ibb.co/R7mjqrs/plate-03.png",
+      "food_category": "Appetizer",
+      "price": 6.99
+    },
+    {
+      "food_name": "Grilled Chicken",
+      "ingredients": "Chicken breast, Olive oil, Herbs",
+      "food_image": "https://i.ibb.co/0cqfCt6/plate-02.png",
+      "food_category": "Entrees",
+      "price": 15.99
+    },
+    {
+      "food_name": "Fish and Chips",
+      "ingredients": "Cod fillet, Potatoes, Beer batter",
+      "food_image": "https://i.ibb.co/tz94hbD/plate-01.png",
+      "food_category": "Entrees",
+      "price": 14.99
+    },
+    {
+      "food_name": "Shrimp Cocktail",
+      "ingredients": "Shrimp, Cocktail sauce, Lemon wedge",
+      "food_image": "https://i.ibb.co/SVLQTMc/plate-04.png",
+      "food_category": "Appetizer",
+      "price": 12.99
+    },
+    {
+      "food_name": "Lamb Chops",
+      "ingredients": "Lamb chops, Rosemary, Garlic",
+      "food_image": "https://i.ibb.co/R7mjqrs/plate-03.png",
+      "food_category": "Entrees",
+      "price": 21.99
+    },
+    {
+      "food_name": "Vegetarian Pizza",
+      "ingredients": "Pizza dough, Tomato sauce, Assorted vegetables",
+      "food_image": "https://i.ibb.co/0cqfCt6/plate-02.png",
+      "food_category": "Signature",
+      "price": 13.99
+    },
+    {
+      "food_name": "Tiramisu",
+      "ingredients": "Ladyfingers, Espresso, Mascarpone cheese",
+      "food_image": "https://i.ibb.co/tz94hbD/plate-01.png",
+      "food_category": "Dessert",
+      "price": 9.99
+    },
+    {
+      "food_name": "Spring Rolls",
+      "ingredients": "Spring roll wrappers, Cabbage, Carrots",
+      "food_image": "https://i.ibb.co/R7mjqrs/plate-03.png",
+      "food_category": "Appetizer",
+      "price": 7.99
+    },
+    {
+      "food_name": "Beef Stroganoff",
+      "ingredients": "Beef sirloin, Onion, Sour cream",
+      "food_image": "https://i.ibb.co/tz94hbD/plate-01.png",
+      "food_category": "Entrees",
+      "price": 18.99
+    },
+    {
+      "food_name": "Caesar Salad",
+      "ingredients": "Romaine lettuce, Croutons, Caesar dressing",
+      "food_image": "https://i.ibb.co/SVLQTMc/plate-04.png",
+      "food_category": "Entrees",
+      "price": 11.99
+    },
+    {
+      "food_name": "Apple Pie",
+      "ingredients": "Apples, Pie crust, Cinnamon",
+      "food_image": "https://i.ibb.co/0cqfCt6/plate-02.png",
+      "food_category": "Dessert",
+      "price": 6.99
+    }
+  ]
+  

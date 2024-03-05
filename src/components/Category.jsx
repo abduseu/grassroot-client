@@ -9,11 +9,11 @@ const Category = () => {
                     </div>
                     <div className="p-5 bg-green rounded-lg flex flex-col justify-center items-center">
                         <img src="https://i.ibb.co/0cqfCt6/plate-02.png" className="py-4" />
-                        Main Dish
+                        Entrees
                     </div>
                     <div className="p-5 bg-green rounded-lg flex flex-col justify-center items-center">
                         <img src="https://i.ibb.co/R7mjqrs/plate-03.png" className="py-4" />
-                        Signature Dish
+                        Signature
                     </div>
                     <div className="p-5 bg-green rounded-lg flex flex-col justify-center items-center">
                         <img src="https://i.ibb.co/tz94hbD/plate-01.png" className="py-4" />
