@@ -14,6 +14,7 @@ import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import ManagePage from "./pages/ManagePage";
 import OrderPage from "./pages/OrderPage";
+import AddPage from "./pages/AddPage";
 
 
 const router = createBrowserRouter([
@@ -44,6 +45,14 @@ const router = createBrowserRouter([
       },
       {
         path: '/manage',
+        element: <ManagePage />,
+      },
+      {
+        path: '/add',
+        element: <AddPage />,
+      },
+      {
+        path: '/update',
         element: <ManagePage/>,
       },
 
