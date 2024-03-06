@@ -51,7 +51,7 @@ const UpdatePage = () => {
                                 <option value="Appetizer">Appetizer</option>
                                 <option value="Dessert">Dessert</option>
                                 <option value="Entrees">Entrees</option>
-                                <option value="Entrees">Signature</option>
+                                <option value="Signature">Signature</option>
                             </select>
                         </div>
                         <div>

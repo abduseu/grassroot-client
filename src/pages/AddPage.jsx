@@ -46,7 +46,7 @@ const AddPage = () => {
                                 <option value="Appetizer">Appetizer</option>
                                 <option value="Dessert">Dessert</option>
                                 <option value="Entrees">Entrees</option>
-                                <option value="Entrees">Signature</option>
+                                <option value="Signature">Signature</option>
                             </select>
                         </div>
                         <div>
@@ -55,7 +55,7 @@ const AddPage = () => {
                         </div>
                         <div>
                             <h3>Price:</h3>
-                            <input type="number" name="price" placeholder="Price" className="input input-bordered w-full" required />
+                            <input type="text" name="price" placeholder="Price" className="input input-bordered w-full" required />
                         </div>
                         <div>
                             <h3>Image URL:</h3>

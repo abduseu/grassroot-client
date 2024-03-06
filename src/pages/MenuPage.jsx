@@ -3,10 +3,10 @@ import MenuCard from "../components/MenuCard";
 
 const MenuPage = () => {
     const items = useAxios('/items')
-    const appetizer = items.filter(x=> x.food_category == "Appetizer")
-    const entrees = items.filter(x=> x.food_category == "Entrees")
-    const signature = items.filter(x=> x.food_category == "Signature")
-    const dessert = items.filter(x=> x.food_category == "Dessert")
+    const appetizer = items.filter(x=> x.food_category === "Appetizer")
+    const entrees = items.filter(x=> x.food_category === "Entrees")
+    const signature = items.filter(x=> x.food_category === "Signature")
+    const dessert = items.filter(x=> x.food_category === "Dessert")
 
     return (
         <div>
@@ -27,7 +27,7 @@ const MenuPage = () => {
                         <div>
                             <h2 className="font-black text-2xl uppercase lg:pl-5">Signature</h2>
                             {
-                                entrees.map(x => <MenuCard key={x._id} obj={ x } />)
+                                signature.map(x => <MenuCard key={x._id} obj={ x } />)
                             }
                         </div>
                     </div>
@@ -35,7 +35,7 @@ const MenuPage = () => {
                         <div>
                             <h2 className="font-black text-2xl uppercase lg:pl-5">Entrees</h2>
                             {
-                                signature.map(x => <MenuCard key={x._id} obj={ x } />)
+                                entrees.map(x => <MenuCard key={x._id} obj={ x } />)
                             }
                         </div>
 
