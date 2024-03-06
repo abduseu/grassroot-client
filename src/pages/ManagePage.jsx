@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ManageCard from "../components/ManageCard";
 import useAxios from "../hooks/useAxios";
 
@@ -6,10 +7,10 @@ const ManagePage = () => {
 
     return (
         <div className="border border-green-400 rounded-lg">
-            <div className="text-black text-center text-xl md:text-5xl font-black p-5 gap-5 w-full">
+            <div className="text-black text-center text-xl md:text-5xl font-black p-5 mb-4 gap-5 w-full">
                 Manage
             </div>
-            <button className="btn btn-success bg-green text-white block mx-auto mt-4">Add Items</button>
+            <Link to='/add'><button className="btn btn-success bg-green text-white block mx-auto">Add Items</button></Link>
             <div className="lg:flex">
                 <div className="p-5 w-full space-y-12">
                     <div>
