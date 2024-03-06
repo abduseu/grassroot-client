@@ -18,11 +18,13 @@ const Header = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/menu">Menu</NavLink></li>
+        <li><NavLink to="/orders">Orders</NavLink></li>
         <li><NavLink to="/login"><button className="navbtn rounded-lg">Login</button></NavLink></li>
     </>
     const linksPrivate = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/orders">My orders</NavLink></li>
+        <li><NavLink to="/menu">Menu</NavLink></li>
+        <li><NavLink to="/orders">Orders</NavLink></li>
     </>
 
     return (
