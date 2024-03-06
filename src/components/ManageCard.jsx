@@ -1,4 +1,4 @@
-const ManageCard = ({obj}) => {
+const ManageCard = ({ obj }) => {
     const { food_image, food_name, food_category, price } = obj;
 
     return (
@@ -10,7 +10,11 @@ const ManageCard = ({obj}) => {
                     <p className="text-sm ">{food_category}</p>
                 </div>
             </div>
-            <h3 className="green font-bold text-xl">${price}</h3>
+            <div className="flex items-center gap-4 font-bold text-xl">
+                <h3 className="green">${price}</h3>
+                <button className="btn btn-sm">Edit</button>
+                <button className="btn btn-sm text-red-600">X</button>
+            </div>
         </div>
     );
 };

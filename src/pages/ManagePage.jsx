@@ -9,6 +9,7 @@ const ManagePage = () => {
             <div className="text-black text-center text-xl md:text-5xl font-black p-5 gap-5 w-full">
                 Manage
             </div>
+            <button className="btn btn-success bg-green text-white block mx-auto mt-4">Add Items</button>
             <div className="lg:flex">
                 <div className="p-5 w-full space-y-12">
                     <div>
