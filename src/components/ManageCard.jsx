@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const ManageCard = ({ obj }) => {
-    const { food_image, food_name, food_category, price } = obj;
+    const { _id, food_image, food_name, food_category, price } = obj;
 
     return (
         <div className="md:flex justify-between items-center my-4">
@@ -12,7 +14,7 @@ const ManageCard = ({ obj }) => {
             </div>
             <div className="flex items-center gap-4 font-bold text-xl">
                 <h3 className="green">${price}</h3>
-                <button className="btn btn-sm">Edit</button>
+                <Link to={`/update/${_id}`}><button className="btn btn-sm">Edit</button></Link>
                 <button className="btn btn-sm text-red-600">X</button>
             </div>
         </div>
