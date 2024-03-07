@@ -1,10 +1,36 @@
 import { useParams } from "react-router-dom";
-import useAxios from "../hooks/useAxios";
+import useAxios, { axiosBase } from "../hooks/useAxios";
+import Swal from "sweetalert2";
+import useAuth from "../hooks/useAuth";
 
 const SinglePage = () => {
     const { id } = useParams()
     const item = useAxios(`/items/${id}`)
-    const { food_image, food_name, ingredients, price } = item;
+    const { _id, food_image, food_name, ingredients, price } = item;
+    const {user} = useAuth()
+
+    const handleAddCart = ()=>{
+        const userId = user.email
+        const itemId = _id
+        const foodName = food_name
+        const quantity = 1
+        const foodPrice = price
+
+        const cart = {userId, itemId, foodName, quantity, foodPrice}
+
+        
+        axiosBase.post('/cart', cart)
+        .then(res => {
+            console.log(res.data)
+            if(res.data.insertedId){
+                Swal.fire(
+                    'Food Added!',
+                    'Your food added to cart!',
+                    'success'
+                )
+            }
+        })
+    }
 
     return (
         <div className="border border-green-400 rounded-lg">
@@ -16,7 +42,6 @@ const SinglePage = () => {
                 <div className="md:flex items-center">
                     <img src={food_image} className="mx-auto w-24" />
                     <div>
-                        {/* <h3 className="font-bold text-xl">{food_name}</h3> */}
                         <p className="text-xl ">{ingredients}</p>
                     </div>
                 </div>
@@ -24,7 +49,7 @@ const SinglePage = () => {
             </div>
 
             <div className="text-center py-5">
-                <button className="btn btn-success bg-green text-white block mx-auto">Add Item</button>
+                <button onClick={handleAddCart} className="btn btn-success bg-green text-white block mx-auto">Add Item</button>
             </div>
         </div>
     );
