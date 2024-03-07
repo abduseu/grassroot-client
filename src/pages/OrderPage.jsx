@@ -2,7 +2,7 @@ const OrderPage = () => {
     return (
         <div className="border border-green-400 rounded-lg">
             <div className="text-black text-center text-xl md:text-5xl font-black p-5 mb-4 gap-5 w-full">
-                Orders
+                Cart
             </div>
 
             <div className="lg:flex">

@@ -17,6 +17,7 @@ import OrderPage from "./pages/OrderPage";
 import AddPage from "./pages/AddPage";
 import UpdatePage from "./pages/UpdatePage";
 import Private from "./components/private";
+import SinglePage from "./pages/SinglePage";
 
 
 const router = createBrowserRouter([
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
         element: <RegistrationPage />,
       },
       {
-        path: '/orders',
+        path: '/cart',
         element: <Private><OrderPage /></Private>,
       },
       {
@@ -55,7 +56,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/update/:id',
-        element: <UpdatePage/>,
+        element: <UpdatePage />,
+      },
+      {
+        path: '/items/:id',
+        element: <SinglePage />,
       },
 
     ]

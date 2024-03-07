@@ -18,13 +18,13 @@ const Header = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/menu">Menu</NavLink></li>
-        <li><NavLink to="/orders">Orders</NavLink></li>
+        <li><NavLink to="/cart">Cart</NavLink></li>
         <li><NavLink to="/login"><button className="navbtn rounded-lg">Login</button></NavLink></li>
     </>
     const linksPrivate = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/menu">Menu</NavLink></li>
-        <li><NavLink to="/orders">Orders</NavLink></li>
+        <li><NavLink to="/cart">Cart</NavLink></li>
     </>
 
     return (
@@ -48,6 +48,7 @@ const Header = () => {
                                         </label>
                                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded">
                                             <li className="whitespace-nowrap">{user.displayName}</li>
+                                            <li><Link to={'/manage'}>Manage</Link></li>
                                             <li><Link onClick={handleSignout}>Signout</Link></li>
                                         </ul>
                                     </div>
