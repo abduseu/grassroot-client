@@ -1,8 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
+import { FaShoppingBag } from "react-icons/fa";
 import useAuth from "../hooks/useAuth";
+import useAxios from "../hooks/useAxios";
 
 const Header = () => {
     const { user, logOut } = useAuth()
+    const cartCount = useAxios(`/cart/${user && user.email}`).length
 
     const handleSignout = () => {
         logOut()
@@ -18,13 +21,13 @@ const Header = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/menu">Menu</NavLink></li>
-        <li><NavLink to="/cart">Cart</NavLink></li>
+        <li><NavLink to="/cart" className="flex"><FaShoppingBag/></NavLink></li>
         <li><NavLink to="/login"><button className="navbtn rounded-lg">Login</button></NavLink></li>
     </>
     const linksPrivate = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/menu">Menu</NavLink></li>
-        <li><NavLink to="/cart">Cart</NavLink></li>
+        <li><NavLink to="/cart" className="flex"><FaShoppingBag/><sup className="text-xs text-red-600">{cartCount}</sup></NavLink></li>
     </>
 
     return (
@@ -49,6 +52,7 @@ const Header = () => {
                                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded">
                                             <li className="whitespace-nowrap">{user.displayName}</li>
                                             <li><Link to={'/manage'}>Manage</Link></li>
+                                            <li><Link to={'/orders'}>Orders</Link></li>
                                             <li><Link onClick={handleSignout}>Signout</Link></li>
                                         </ul>
                                     </div>

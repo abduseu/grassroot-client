@@ -18,6 +18,7 @@ import AddPage from "./pages/AddPage";
 import UpdatePage from "./pages/UpdatePage";
 import Private from "./components/private";
 import SinglePage from "./pages/SinglePage";
+import CartPage from "./pages/CartPage";
 
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       },
       {
         path: '/cart',
+        element: <Private><CartPage /></Private>,
+      },
+      {
+        path: '/orders',
         element: <Private><OrderPage /></Private>,
       },
       {
