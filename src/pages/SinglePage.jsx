@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useAxios, { axiosBase } from "../hooks/useAxios";
 import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
@@ -7,7 +7,8 @@ const SinglePage = () => {
     const { id } = useParams()
     const item = useAxios(`/items/${id}`)
     const { _id, food_image, food_name, ingredients, price } = item;
-    const {user} = useAuth()
+    const {user} = useAuth();
+    const navigate = useNavigate()
 
     const handleAddCart = ()=>{
         const userId = user.email
@@ -28,6 +29,8 @@ const SinglePage = () => {
                     'Your food added to cart!',
                     'success'
                 )
+                //redirect
+                navigate('/menu')
             }
         })
     }
