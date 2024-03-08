@@ -11,7 +11,7 @@ const CartPage = () => {
     // Send filter via post method
     const filterEmail = user.email;
     useEffect(() => {
-        axiosBase(`/cart/${filterEmail}`)
+        axiosBase(`/cart?userId=${filterEmail}`)
             .then(res => {
                 console.log(res.data);
                 setCart(res.data);

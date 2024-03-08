@@ -1,11 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaShoppingBag } from "react-icons/fa";
 import useAuth from "../hooks/useAuth";
-import useAxios from "../hooks/useAxios";
+import useCart from "../hooks/useCart";
+// import useAxios from "../hooks/useAxios";
 
 const Header = () => {
     const { user, logOut } = useAuth()
-    const cartCount = useAxios(`/cart/${user && user.email}`).length
+    //const cartCount = useAxios(`/cart/${user && user.email}`).length
+    const [cart] = useCart();
 
     const handleSignout = () => {
         logOut()
@@ -27,7 +29,7 @@ const Header = () => {
     const linksPrivate = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/menu">Menu</NavLink></li>
-        <li><NavLink to="/cart" className="flex"><FaShoppingBag/><sup className="text-xs text-red-600">{cartCount}</sup></NavLink></li>
+        <li><NavLink to="/cart" className="flex"><FaShoppingBag/><sup className="text-xs text-red-600">{cart.length}</sup></NavLink></li>
     </>
 
     return (
