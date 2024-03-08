@@ -1,15 +1,7 @@
-import { useEffect, useState } from "react";
-import { axiosBase } from "../hooks/useAxios";
+import useAxios from "../hooks/useAxios";
 
 const OrderPage = () => {
-    const [orders, setOrders] = useState([]);
-
-    useEffect(() => {
-        axiosBase(`/orders`)
-            .then(res => {
-                setOrders(res.data);
-            })
-    }, []);
+    const orders = useAxios('/orders')
 
     const handleMarkAsComplete = () =>{
         console.log('completed')
