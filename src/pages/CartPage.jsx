@@ -55,7 +55,7 @@ const CartPage = () => {
                 quantity: 1,
                 foodPrice: item.foodPrice
             })),
-            totalPrice: totalPrice,
+            totalPrice: totalPrice.toFixed(2),
             status: "pending"
         };
 
@@ -107,7 +107,7 @@ const CartPage = () => {
             </div>
 
             <div className="text-center py-5">
-                <h3 className="font-bold text-xl pb-5">Total Price: <span>${totalPrice}</span></h3>
+                <h3 className="font-bold text-xl pb-5">Total Price: <span>${totalPrice.toFixed(2)}</span></h3>
                 <button onClick={handlePurchase} className="btn btn-success bg-green text-white block mx-auto">Place order</button>
             </div>
         </div>
