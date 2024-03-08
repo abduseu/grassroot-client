@@ -1,10 +1,40 @@
-import useAxios from "../hooks/useAxios";
+import Swal from "sweetalert2";
+import useAxios, { axiosBase } from "../hooks/useAxios";
 
 const OrderPage = () => {
     const orders = useAxios('/orders')
 
-    const handleMarkAsComplete = () =>{
-        console.log('completed')
+    const handleMarkAsComplete = (id) => {
+
+        axiosBase.put(`/orders/${id}`, {status: "completed"})
+            .then(res => {
+                console.log(res.data)
+                if (res.data.modifiedCount > 0) {
+                    Swal.fire(
+                        'Order Completed',
+                        'Order marked as completed',
+                        'success'
+                    )
+                    // Reload the page
+                    window.location.reload();
+                }
+            })
+    }
+
+    const handleDeleteOrder = (id) => {
+        axiosBase.delete(`/orders/${id}`)
+            .then(res => {
+                console.log(res.data)
+                if (res.data.deletedCount > 0) {
+                    Swal.fire(
+                        'Deleted!',
+                        'Order deleted!!!.',
+                        'success'
+                    )
+                    // Reload the page
+                    window.location.reload();
+                }
+            })
     }
 
     return (
@@ -41,7 +71,7 @@ const OrderPage = () => {
                                         ) : (
                                             <div>
                                                 <span className="green font-bold block mx-auto">Completed</span>
-                                                <button className="btn btn-success bg-green text-white block mx-auto" onClick={() => handleMarkAsComplete(order._id)}>Delete</button>
+                                                <button className="btn btn-error bg-red-600 text-white block mx-auto" onClick={() => handleDeleteOrder(order._id)}>Delete</button>
                                             </div>
                                         )}
                                     </div>
