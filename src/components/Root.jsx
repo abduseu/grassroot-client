@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import Copyright from "./Copyright";
 
 const Root = () => {
     return (
@@ -19,6 +20,7 @@ const Root = () => {
                 <div className="xl:container mx-auto">
                     <div className="mx-5 mt-6">
                         <Footer></Footer>
+                        <Copyright></Copyright>
                     </div>
                 </div>
             </footer>
