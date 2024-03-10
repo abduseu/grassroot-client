@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import useAxios, { axiosBase } from "../hooks/useAxios";
 import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
+import useCart from "../hooks/useCart";
 
 const SinglePage = () => {
     const { id } = useParams()
@@ -9,6 +10,7 @@ const SinglePage = () => {
     const { _id, food_image, food_name, ingredients, price } = item;
     const {user} = useAuth();
     const navigate = useNavigate()
+    const [, refetch] = useCart();
 
     const handleAddCart = ()=>{
         const userId = user.email
@@ -24,6 +26,7 @@ const SinglePage = () => {
         .then(res => {
             console.log(res.data)
             if(res.data.insertedId){
+                refetch()
                 Swal.fire(
                     'Food Added!',
                     'Your food added to cart!',

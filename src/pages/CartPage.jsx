@@ -2,16 +2,18 @@ import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import { axiosBase } from "../hooks/useAxios";
 import Swal from "sweetalert2";
+import useCart from "../hooks/useCart";
 
 const CartPage = () => {
     const { user } = useAuth();
     const [cart, setCart] = useState([]);
+    const [, refetch] = useCart();          //undate cart count on delete
     const [totalPrice, setTotalPrice] = useState(0);
 
     // Send filter via post method
     const filterEmail = user.email;
     useEffect(() => {
-        axiosBase(`/cart?userId=${filterEmail}`)
+        axiosBase(`/cart?email=${filterEmail}`)
             .then(res => {
                 console.log(res.data);
                 setCart(res.data);
@@ -32,6 +34,7 @@ const CartPage = () => {
             .then(res => {
                 console.log(res.data);
                 if (res.data.deletedCount > 0) {
+                    refetch()
                     Swal.fire(
                         'Deleted!',
                         'Item removed from cart.',
