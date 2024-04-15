@@ -53,8 +53,7 @@ const Header = () => {
                                         </label>
                                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded">
                                             <li className="whitespace-nowrap">{user.displayName}</li>
-                                            <li><Link to={'/manage'}>Manage</Link></li>
-                                            <li><Link to={'/orders'}>Orders</Link></li>
+                                            <li><Link to={'/manager'}>Dashboard</Link></li>
                                             <li><Link onClick={handleSignout}>Signout</Link></li>
                                         </ul>
                                     </div>
