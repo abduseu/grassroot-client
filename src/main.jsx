@@ -13,7 +13,6 @@ import HomePage from "./pages/HomePage"
 import MenuPage from "./pages/MenuPage";
 import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
-import ManagePage from "./pages/ManagePage";
 import OrderPage from "./pages/OrderPage";
 import Private from "./components/private";
 import SinglePage from "./pages/SinglePage";
@@ -21,6 +20,7 @@ import CartPage from "./pages/CartPage";
 import ManagerProfile from "./pages/manager/ManagerProfile";
 import Add from "./pages/manager/Add";
 import Update from "./pages/manager/Update";
+import ManageItems from "./pages/manager/ManageItems";
 
 
 const router = createBrowserRouter([
@@ -36,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/menu',
         element: <MenuPage />,
+      },
+      {
+        path: '/items/:id',
+        element: <SinglePage />,
       },
       {
         path: '/login',
@@ -61,7 +65,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/manage',
-        element: <ManagePage />,
+        element: <ManageItems />,
       },
       {
         path: '/add',
@@ -71,11 +75,6 @@ const router = createBrowserRouter([
         path: '/update/:id',
         element: <Update />,
       },
-      {
-        path: '/items/:id',
-        element: <SinglePage />,
-      },
-
     ]
   }
 ])
