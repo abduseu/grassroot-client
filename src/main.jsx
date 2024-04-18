@@ -15,12 +15,12 @@ import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import ManagePage from "./pages/ManagePage";
 import OrderPage from "./pages/OrderPage";
-import AddPage from "./pages/AddPage";
 import UpdatePage from "./pages/UpdatePage";
 import Private from "./components/private";
 import SinglePage from "./pages/SinglePage";
 import CartPage from "./pages/CartPage";
 import ManagerProfile from "./pages/manager/ManagerProfile";
+import Add from "./pages/manager/Add";
 
 
 const router = createBrowserRouter([
@@ -49,10 +49,6 @@ const router = createBrowserRouter([
         path: '/cart',
         element: <Private><CartPage /></Private>,
       },
-      {
-        path: '/orders',
-        element: <Private><OrderPage /></Private>,
-      },
 
       //manager
       {
@@ -60,12 +56,16 @@ const router = createBrowserRouter([
         element: <ManagerProfile />,
       },
       {
+        path: '/orders',
+        element: <Private><OrderPage /></Private>,
+      },
+      {
         path: '/manage',
         element: <ManagePage />,
       },
       {
         path: '/add',
-        element: <AddPage />,
+        element: <Add />,
       },
       {
         path: '/update/:id',
